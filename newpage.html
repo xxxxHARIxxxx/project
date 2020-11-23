@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GROUPNT</title>
+
+    <!--FONTS--> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Xanh+Mono&display=swap" rel="stylesheet">
+
+    <!--JSS-->
+    <script src="new.js"></script>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="mainCSS.css">
+    
+</head>
+<body>
+    <section class="insert-tasks" id="insertasks">
+        <h2>NEW TASK:</h2>
+        <ul>
+            TITLE: 
+        </ul>
+        <ul>
+            <input type="text" class="title" id="title">
+        </ul>
+        <ul>
+            CONTENT:
+        </ul>
+        <ul>
+            <textarea id="content" class="content"></textarea>
+        </ul>
+        <div class="wrapper-a">
+            <input type="button" class="btn" value="Insert" onclick="insert();">
+            <input type="button" class="btn" value="Cancel" onclick="hideInsertTasks();">
+            <span class="error" id="error"></span>
+        </div>
+</section>
+</body>
+</html>

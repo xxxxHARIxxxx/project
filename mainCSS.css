@@ -1,0 +1,291 @@
+/* Global Variables */
+:root {
+    --mainfont:'Xanh Mono', monospace;;
+    --white: #f6f5f5;
+    --shadow: 2px 2px 2px black;
+    --blackgrey: #505050;
+    --grey: #d6d6d6;
+    --red: #db2b2b;
+    --text-color:#00334e;
+    --border-color:#ee6f57;
+    --background-box:#f6f5f1;
+}
+/* font-family: 'Josefin Sans', sans-serif;
+font-family: 'Xanh Mono', monospace;*/
+
+html, body {
+    font-family: var(--mainfont);
+    font-weight: normal;
+    font-size: 1rem;
+     
+    background: var(--white);
+    color:var(--text-color);
+}
+
+a {
+    transition: 200ms;
+    -o-transition: 200ms;
+    -ms-transition: 200ms;
+    -moz-transition: 200ms;
+    -webkit-transition: 200ms;
+    cursor: pointer;
+}
+
+input {
+    transition: 200ms;
+    -o-transition: 200ms;
+    -ms-transition: 200ms;
+    -moz-transition: 200ms;
+    -webkit-transition: 200ms;
+    cursor: pointer;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    letter-spacing: .2rem;
+}
+
+.title {
+    padding: 0.5rem 1rem;
+    background: var(--background-box);
+    color: var(--text-color);
+    border: 1.5px solid var(--border-color);
+    margin-top: 15px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    
+}
+
+.content {
+    padding: 1rem;
+    height: 200px;
+    vertical-align: top;
+    font-family: var(--mainfont);
+    background: var(--background-box);
+    color: var(--text-color);
+    border: 1.5px solid var(--border-color);
+    margin-top: 15px;
+    margin-bottom: 50px;
+    resize: none;
+    overflow: auto;
+}
+
+.btn {
+    font-family: var(--mainfont);
+    padding: 0.5rem 1rem;
+    background: var(--white);
+    border: 0;
+    color: var(--text-color);
+    border: 2.2px solid var(--border-color);
+    width: 100%;
+    margin-right: 10px;
+
+}
+
+.btn:hover {
+    background: white;
+    color: black;
+    border: 1.5px solid black;
+}
+
+.deletebtn {
+    position: absolute;
+    top: 3vh;
+    left: 2vw;
+    opacity: 0.3;
+    width: 150px;
+    text-align: center;
+}
+
+.deletebtn:hover {
+    opacity: 1;
+}
+
+.wrapper-a {
+    width: 77vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    border-color: black;
+    padding-right: 10px;
+    
+}
+
+/* Header */
+header {
+    text-align: center;
+}
+
+header > hr {
+    width: 95%;
+    background: var(--blackgrey);
+    border: 1px solid var(--blackgrey);
+}
+
+/* LOGOUT BTN */
+.logoutLblPos{
+    position:fixed;
+    top: 3vh;
+    right: 2vw;
+ }
+
+ .logoutbtn{
+     opacity:0.3;
+ }
+
+ .logoutbtn:hover{
+     opacity:1;
+ }
+
+/* Adding Tasks */
+.insert-tasks {
+    background-color:var(--white);
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 10vh 10vw;
+    
+}
+
+.insert-tasks > h2 {
+    text-align: center;
+}
+
+.insert-tasks > ul {
+    width: 100%;
+    
+    margin: auto;
+}
+
+.insert-tasks > ul > input, .insert-tasks > ul > textarea {
+    width: 80vw;
+
+}
+
+.error {
+    text-align: right;
+
+}
+
+/* Tasks List */
+.tasksoutput > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color:var(--text-color);
+}
+
+.tasksoutput > div > span {
+    padding: 30px;
+    background: var(--background-box);
+    margin: 10px;
+    height: fit-content;
+    color: var(--text-color);
+    vertical-align: middle;
+    border: 2.2px solid var(--border-color);
+    line-height:25px;
+}
+
+.tasksoutput > div > span > .x-btn {
+    background: var(--border-color);
+    padding: 4px 7px;
+    margin: 0;
+    border: 0;
+}
+
+.tasksoutput > div > span > input:hover {
+    background: var(--white);
+    color: var(--text-color);
+}
+
+.tasksoutput > div > span > h2 {
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+
+/* Insert Button */
+.insert-btn {
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    padding: 1rem;
+    border: 0;
+    border-radius: 50%;
+    margin: 0;
+    font-weight: 200;
+    font-size: 1.05rem;
+    background: var(--border-color);
+}
+
+.insert-btn:hover {
+    background: white;
+    box-shadow: var(--shadow);
+}
+
+.insert-btn:active {
+    background: black;
+    color: white;
+}
+
+/* Media */
+@media only screen and (max-width: 1024px) {
+    header {
+        font-size: 3rem;
+    }
+
+    .insert-btn {
+        width: 200px;
+        height: 200px;
+        font-size: 7rem;
+    }
+
+    .deletebtn {
+        display: none;
+    }
+
+    .insert-tasks {
+        font-size: 2rem;
+    }
+
+    .insert-tasks > ul {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        
+    }
+
+    .insert-tasks > ul > input, .insert-tasks > ul > textarea {
+        width: 75vw;
+        font-size: 2.5rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        
+    }
+
+    .btn {
+        font-size: 2.5rem;
+    }
+
+    .content {
+        font-size: 1.5rem;
+    }
+
+    .tasksoutput > div {
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 2.5rem;
+    }
+
+    .x-btn {
+        font-size: 2rem;
+        width: 80px;
+        height: 80px;
+    }
+}

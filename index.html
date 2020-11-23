@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <!-- meta settings -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=7">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Xanh+Mono&display=swap" rel="stylesheet">  
+        <!-- title -->
+        <title>Tasks Web Application</title>
+
+        <!-- javascript -->
+        <script src="mainJS.js"></script>
+
+        <!-- css -->
+        <link rel="stylesheet" href="mainCSS.css">
+
+    </head>
+    <!-- onload functions -->
+    <body onload="getDOMs();loadTasksARefresh();loadTasks();displayTasks();">
+
+        <!-- header -->
+        <header>    
+            <h2>GROUPNT</h2>
+            <hr>
+            <form align="right" name="form1" method="post" action="D:\Class ppt\PROJECT\login-and-signup-with-php-mysql-master\index.html">
+                <label class="logoutLblPos">
+                <input name="submit2" type="submit" id="submit2" value="log out" class="btn logoutbtn">
+                </label>
+              </form>
+        </header>
+  
+        <!-- Adding Tasks Section -->
+        <section class="insert-tasks" id="insertasks">
+                <h2>NEW TASK:</h2>
+                <ul>
+                    TITLE: 
+                </ul>
+                <ul>
+                    <input type="text" class="title" id="title">
+                </ul>
+                <ul>
+                    CONTENT:
+                </ul>
+                <ul>
+                    <textarea id="content" class="content"></textarea>
+                </ul>
+                <div class="wrapper-a"> 
+                    <input type="button" class="btn" value="Insert" onclick="insert();">
+                    <input type="button" class="btn" value="Cancel" onclick="hideInsertTasks();">
+                    <span class="error" id="error"></span>
+                </div>
+        </section>
+
+        <!-- Tasks List Section -->
+        <section class="tasks-list">
+            <span class="tasksoutput" id="tasksoutput"></span>
+        </section>
+
+        <!-- Delete all Tasks Button -->
+        <input type="button" class="btn deletebtn" value="Delete all Tasks" onclick="clearTasks();">
+
+        <!-- Insert Task Button -->
+        <form action="newpage.html">
+            <input type="button" value="+" class="insert-btn" id="insertbtn" onclick="showInsertTasks();">
+        </form>
+        
+
+    </body>
+</html>
